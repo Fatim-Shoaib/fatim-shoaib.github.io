@@ -1,142 +1,247 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" id="top">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Fatim Shoaib - AI Researcher</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mohammad Fatim Shoaib - Portfolio</title>
+    <meta name="description"
+        content="Mohammad Fatim Shoaib - ML researcher and engineer. LLM compression, PTQ for diffusion, agentic systems, and software projects." />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="wrap">
+            <div class="header-top">
+                <div class="brand">
+                    <h1>Mohammad Fatim Shoaib</h1>
+                    <p>BSCS @ LUMS · ML Researcher · LLM compression and quantization</p>
+                </div>
 
-    <header>
-        <div class="container">
-            [cite_start]<h1>Mohammad Fatim Shoaib [cite: 2, 49, 94, 163]</h1>
-            <p class="tagline">AI Researcher & CS Undergraduate | [cite_start]Specializing in LLM Efficiency, Diffusion Models & Agentic Systems [cite: 175, 191, 193]</p>
-            <div class="social-links">
-                [cite_start]<a href="mailto:mfatimshoaib@gmail.com">Email [cite: 3, 50, 95, 164]</a>
-                [cite_start]<a href="https://www.linkedin.com/in/mohammad-fatim-shoaib/" target="_blank">LinkedIn [cite: 3, 50, 95, 164]</a>
-                [cite_start]<a href="https://github.com/mfatimshoaib" target="_blank">GitHub [cite: 3, 50, 95]</a>
+                <div class="header-actions">
+                    <a class="btn" href="Mohammad_Fatim_Shoaib_Resume_ML.pdf" download>Resume (ML)</a>
+                    <a class="btn btn-ghost" href="Mohammad Fatim Shoaib - CV.pdf" download>CV</a>
+                </div>
             </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
+                <a href="#courses">Coursework</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                [cite_start]I am a final-year Computer Science undergraduate at <strong>LUMS</strong> (Lahore University of Management Sciences), graduating in 2026[cite: 5, 8, 166, 169]. 
-                [cite_start]My research focuses on the intersection of efficiency and interpretability in Generative AI[cite: 177, 187, 191]. 
-                [cite_start]Currently, I am working on <strong>post-training quantization for diffusion models</strong> [cite: 191] and analyzing 
-                [cite_start]<strong>federated learning dynamics</strong> in vision systems[cite: 187].
-            </p>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2>Research & Experience</h2>
-            
-            <div class="job">
-                <h3>AI Intern | [cite_start]Skylabs AI [cite: 132, 172]</h3>
-                [cite_start]<p class="date">Aug 2025 - Present [cite: 133, 174]</p>
-                <ul>
-                    [cite_start]<li>Researching methods to overcome LLM bottlenecks using custom agentic pipelines and Google ADK[cite: 134, 175, 176].</li>
-                    [cite_start]<li>Designing datasets and evaluation metrics using Google AI Studio and OpenRouter APIs[cite: 175].</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Research Intern (LLM Compression) | [cite_start]LUMS [cite: 29, 30, 138, 177]</h3>
-                [cite_start]<p class="date">Jan 2025 - June 2025 [cite: 29, 139, 178]</p>
-                <ul>
-                    [cite_start]<li>Conducted research on pruning-based compression, specifically the Wanda technique[cite: 30, 141, 180].</li>
-                    [cite_start]<li>Developed a contrastive learning-based framework to improve accuracy at higher sparsity ratios[cite: 30, 142, 181].</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Research Intern (Vision Lab) | [cite_start]GIST, South Korea [cite: 32, 78, 143, 182]</h3>
-                [cite_start]<p class="date">Aug 2024 - Dec 2024 [cite: 33, 79, 144, 183]</p>
-                <ul>
-                    [cite_start]<li>Enhanced an LSTM-based image captioning model by incorporating multi-headed self-attention[cite: 34, 80, 145, 184].</li>
-                    [cite_start]<li>Achieved highest performance metrics (BLEU 1-4) on the Flickr8k dataset compared to baseline architectures[cite: 146, 185].</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Selected Projects</h2>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    [cite_start]<h3>Hessian-Based 4-bit Quantization [cite: 191]</h3>
-                    <p class="tech-stack">Diffusion Models, Python, PyTorch</p>
-                    [cite_start]<p>Implemented Qronos post-training quantization using second-order Hessian matrices[cite: 192]. [cite_start]Reduced diffusion model size (1.16GB â†’ 1.04GB) while maintaining near-FP16 semantic alignment and competitive perceptual fidelity[cite: 192].</p>
+    <main>
+        <section id="about" class="wrap section panel hero-panel">
+            <div class="hero-grid">
+                <div>
+                    <h2>About</h2>
+                    <p>
+                        I am a computer science student at LUMS with research and project experience in LLM compression,
+                        post-training quantization for diffusion models, and agentic AI systems.
+                    </p>
+                    <ul class="meta-list">
+                        <li><strong>Location:</strong> Lahore, Pakistan</li>
+                        <li><strong>Email:</strong> <a href="mailto:mfatim.shoaib@gmail.com">mfatim.shoaib@gmail.com</a></li>
+                        <li><strong>Phone:</strong> +92 3202020325</li>
+                        <li><strong>Education:</strong> BSc Computer Science, LUMS (expected 2026)</li>
+                    </ul>
+                    <p class="inline-links">
+                        <a href="About Me.pdf" download>Download About Me</a>
+                        <a href="Experiences.pdf" download>Full Experiences (PDF)</a>
+                    </p>
                 </div>
 
-                <div class="project-card">
-                    [cite_start]<h3>Mechanistic Analysis of Federated Learning [cite: 187]</h3>
-                    <p class="tech-stack">CNNs, Interpretability, Research</p>
-                    [cite_start]<p>Demonstrated that global aggregation of conflicting internal mechanisms in federated learning creates "induced polysemanticity," preventing coherent global model convergence[cite: 189].</p>
-                </div>
-
-                <div class="project-card">
-                    [cite_start]<h3>Agentic Framework for Business Data [cite: 21, 62, 109, 193]</h3>
-                    [cite_start]<p class="tech-stack">Gemini API, Mistral 7B, LangChain [cite: 22, 64, 110, 194]</p>
-                    [cite_start]<p>Engineered a multi-agent system to automate data science workflows (EDA, Modeling)[cite: 22, 64, 110, 194]. [cite_start]Integrated a RAG module sourcing from 800+ local case studies to provide Pakistan-specific business insights[cite: 23, 67, 111, 195].</p>
-                </div>
-
-                <div class="project-card">
-                    [cite_start]<h3>Deep Learning Compiler [cite: 105]</h3>
-                    <p class="tech-stack">Systems, Python, Compiler Design</p>
-                    [cite_start]<p>Building a minimal deep learning compiler for CNNs from first principles [cite: 106][cite_start], including input parsing, Intermediate Representation (IR), and graph-level optimization[cite: 108].</p>
-                </div>
-
+                <aside class="stats-card">
+                    <h3>Quick Stats</h3>
+                    <ul>
+                        <li>CGPA ~3.5</li>
+                        <li>Dean's Honour List</li>
+                        <li>Exchange at GIST (Aug-Dec 2024)</li>
+                    </ul>
+                    <h4>Top Areas</h4>
+                    <p>LLM compression, Hessian PTQ for diffusion, agentic RAG systems, spatial transcriptomics,
+                        Flutter apps.</p>
+                </aside>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                [cite_start]<li>Python [cite: 37, 83, 150, 200]</li>
-                [cite_start]<li>PyTorch [cite: 39, 86, 152, 201]</li>
-                [cite_start]<li>TensorFlow [cite: 39, 152, 201]</li>
-                [cite_start]<li>LangChain [cite: 39, 67, 85, 154]</li>
-                [cite_start]<li>Hugging Face [cite: 39, 67, 86, 153, 202]</li>
-                [cite_start]<li>Gemini API [cite: 22, 27, 39, 64, 85]</li>
-                [cite_start]<li>C++ [cite: 37, 83, 150, 200]</li>
-                [cite_start]<li>TypeScript [cite: 37, 83, 150, 200]</li>
-                [cite_start]<li>Docker [cite: 192][cite_start]</li> <li>Google ADK [cite: 134, 153, 176, 202]</li>
+        <section id="research" class="wrap section panel">
+            <h2>Research Highlights</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>LLM Compression</h3>
+                    <p>Research on Wanda-based sparse pruning and contrastive pruning techniques for stronger
+                        compression while preserving performance.</p>
+                    <p class="meta">LUMS · Jan-May 2025</p>
+                </article>
+
+                <article class="card">
+                    <h3>Hessian 4-bit PTQ for Diffusion</h3>
+                    <p>Post-training quantization pipeline with Hessian-informed corrections and block-wise
+                        reconstruction for SDXL-style diffusion models.</p>
+                    <p class="meta">10xEngineers collaboration · Ongoing</p>
+                </article>
+
+                <article class="card">
+                    <h3>Agentic Data Analysis System</h3>
+                    <p>Multi-agent framework converting business queries into EDA and ML pipelines with RAG over
+                        Pakistan-focused documents.</p>
+                    <p class="meta">Python, LangChain, FAISS/ChromaDB</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="wrap section panel panel-alt">
+            <h2>Projects</h2>
+
+            <div class="controls">
+                <input id="projectSearch" placeholder="Search projects by title, tech, or type" />
+                <select id="projectFilter" aria-label="Filter projects">
+                    <option value="all">All</option>
+                    <option value="research">Research</option>
+                    <option value="personal">Personal</option>
+                    <option value="course">Coursework</option>
+                </select>
+            </div>
+
+            <div id="projectList" class="stack">
+                <article class="project-entry" data-type="research" data-tech="langchain gemini mistral python rag">
+                    <h3>Agentic Framework for Business Data Analysis</h3>
+                    <p>LLM-based multi-agent pipeline for automated EDA and ML with RAG over 800+ local case studies.</p>
+                    <p class="meta">Tech: Python, LangChain, ChromaDB/FAISS, Gemini API, Mistral-7B</p>
+                </article>
+
+                <article class="project-entry" data-type="research"
+                    data-tech="pytorch bitsandbytes sdxl quantization hessian">
+                    <h3>Hessian-Based 4-bit PTQ for Diffusion Models</h3>
+                    <p>PTQ approach using second-order information and reconstruction for compressed diffusion models.</p>
+                    <p class="meta">Tech: PyTorch, bitsandbytes, NumPy, CLIP/LPIPS metrics</p>
+                </article>
+
+                <article class="project-entry" data-type="course" data-tech="flutter nodejs mongodb">
+                    <h3>E-Fit - Flutter Fitness App</h3>
+                    <p>Cross-platform app with OTP auth, AI-generated plans, and Node.js + MongoDB backend.</p>
+                    <p class="meta">Tech: Flutter, Dart, Node.js, Express, MongoDB</p>
+                    <p><a href="https://github.com/fatim-shoaib/e-fit" target="_blank" rel="noreferrer">GitHub</a></p>
+                </article>
+
+                <article class="project-entry" data-type="course" data-tech="react nodejs socketio mern typescript">
+                    <h3>ColorGrid - Real-time MERN Game</h3>
+                    <p>2-player turn-based game with matchmaking, history, and leaderboard using Socket.IO.</p>
+                    <p class="meta">Tech: React, Node.js, Express, MongoDB, Socket.IO, TypeScript</p>
+                </article>
+
+                <article class="project-entry" data-type="course" data-tech="python numpy pytorch mnist">
+                    <h3>Neural Networks and MLP from Scratch</h3>
+                    <p>NumPy and PyTorch implementations for MNIST and related coursework experiments.</p>
+                    <p class="meta">Tech: Python, NumPy, PyTorch</p>
+                </article>
+
+                <article class="project-entry" data-type="course" data-tech="c++ trees hashtable b+ trie">
+                    <h3>Data Structures Projects</h3>
+                    <p>AVL/BST, B+ trees, double hashing, trie, Huffman coding, external sort, and DNS simulation.</p>
+                    <p class="meta">Tech: C++</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="courses" class="wrap section panel">
+            <h2>Selected Coursework</h2>
+            <ul class="course-list">
+                <li>Large Language Model Systems</li>
+                <li>Advanced Deep Learning</li>
+                <li>AI Experience Lab (NLP)</li>
+                <li>Data Science in Healthcare</li>
+                <li>AI on Edge</li>
+                <li>Multi-Modal Diffusion Models</li>
+                <li>Software Engineering</li>
+                <li>Network Centric Computing</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="edu-item">
-                [cite_start]<h3>Lahore University of Management Sciences (LUMS) [cite: 5, 52, 97, 166]</h3>
-                <p>BSc in Computer Science (2022 - 2026) | [cite_start]First Year Dean's Honor List [cite: 6, 8, 53, 55, 98, 99, 101, 167, 169]</p>
+        <section id="skills" class="wrap section panel panel-alt">
+            <h2>Skills</h2>
+            <div class="chips">
+                <span>Python</span><span>C++</span><span>TypeScript</span><span>PyTorch</span><span>TensorFlow</span>
+                <span>LangChain</span><span>Hugging Face</span><span>ChromaDB</span><span>FAISS</span><span>Flutter</span>
+                <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Socket.IO</span>
             </div>
-            <div class="edu-item">
-                [cite_start]<h3>Gwangju Institute of Science & Technology (GIST) [cite: 11, 58, 103, 170]</h3>
-                [cite_start]<p>Exchange Semester, South Korea (Fall 2024) [cite: 16, 17, 63, 170, 171]</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Mohammad Fatim Shoaib. [cite_start]Based in Lahore, Pakistan[cite: 7, 54, 100, 168].</p>
+        <section id="experience" class="wrap section panel">
+            <h2>Experience</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Research Intern - LLM Compression (LUMS)</h3>
+                    <p class="meta">Jan 2025 - May 2025</p>
+                    <p>Worked on pruning-based LLM compression and contrastive pruning strategies.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Research Intern - Machine Vision Lab (GIST)</h3>
+                    <p class="meta">Aug 2024 - Dec 2024</p>
+                    <p>Worked on image captioning models with multi-head attention and BLEU evaluations.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Teaching Assistant - CS100, Data Structures</h3>
+                    <p>Supported labs, grading, and office hours.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Director IT - LUMS Model UN</h3>
+                    <p>Built WordPress systems and automated QR workflows for 800+ delegates.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="wrap section panel panel-alt">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:mfatim.shoaib@gmail.com">mfatim.shoaib@gmail.com</a></p>
+            <p><strong>Phone:</strong> +92 3202020325</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/fatim-shoaib" target="_blank"
+                    rel="noreferrer">github.com/fatim-shoaib</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohammad-fatim-shoaib/" target="_blank"
+                    rel="noreferrer">mohammad-fatim-shoaib</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>© 2026 Mohammad Fatim Shoaib</p>
         </div>
     </footer>
 
+    <script>
+        (function () {
+            const search = document.getElementById('projectSearch');
+            const filter = document.getElementById('projectFilter');
+            const list = Array.from(document.querySelectorAll('#projectList .project-entry'));
+
+            function render() {
+                const q = (search.value || '').toLowerCase();
+                const t = filter.value;
+
+                list.forEach((el) => {
+                    const text = (el.textContent || '').toLowerCase();
+                    const matchesQ = q === '' || text.indexOf(q) !== -1;
+                    const matchesFilter = t === 'all' || el.dataset.type === t;
+                    el.style.display = matchesQ && matchesFilter ? 'block' : 'none';
+                });
+            }
+
+            search.addEventListener('input', render);
+            filter.addEventListener('change', render);
+            render();
+        })();
+    </script>
 </body>
+
 </html>
