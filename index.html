@@ -6,8 +6,417 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mohammad Fatim Shoaib - Portfolio</title>
     <meta name="description"
-        content="Mohammad Fatim Shoaib - Final Semester @ LUMS | Expertise in Diffusion Models, AI on edge devies, and building agentic workflows" />
-    <link rel="stylesheet" href="style.css" />
+        content="Mohammad Fatim Shoaib - Final Semester @ LUMS | Expertise in Diffusion Models, AI on edge devices, and building agentic workflows" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+        :root {
+            --bg: #f2f6fa;
+            --surface: #ffffff;
+            --surface-alt: #eef3f8;
+            --text: #1a2b3c;
+            --muted: #5d6f82;
+            --line: #d9e4ef;
+            --accent: #0077cc;
+            --accent-strong: #005c9e;
+            --maxw: 1080px;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 10% -10%, #d6e8f9 0%, transparent 40%),
+                radial-gradient(circle at 90% -15%, #d9f5ef 0%, transparent 35%),
+                var(--bg);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Space Grotesk", "Segoe UI", sans-serif;
+            line-height: 1.25;
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        a:hover {
+            color: var(--accent-strong);
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid var(--line);
+            background: rgba(242, 246, 250, 0.95);
+            backdrop-filter: blur(8px);
+        }
+
+        .header-top {
+            padding: 16px 0 10px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .brand h1 {
+            margin-bottom: 4px;
+            font-size: clamp(1.5rem, 2.4vw, 2rem);
+        }
+
+        .brand p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.96rem;
+        }
+
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 0 14px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #2d4155;
+            background: #e8eef5;
+            border: 1px solid #d3deea;
+            border-radius: 999px;
+            padding: 7px 12px;
+            transition: all 0.2s ease;
+        }
+
+        .main-nav a:hover {
+            background: #dce8f3;
+            border-color: #c7d7e8;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            padding: 9px 13px;
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        .btn:hover {
+            color: #ffffff;
+            background: var(--accent-strong);
+        }
+
+        .section {
+            padding-top: 22px;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding-top: 24px;
+            padding-bottom: 24px;
+            margin-top: 20px;
+            box-shadow: 0 6px 22px rgba(16, 42, 67, 0.05);
+            scroll-margin-top: 160px;
+        }
+
+        .panel-alt {
+            background: var(--surface-alt);
+        }
+
+        .hero-panel {
+            margin-top: 26px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .meta-list {
+            padding-left: 18px;
+            margin: 14px 0;
+        }
+
+        .stats-card {
+            background: #f7fbff;
+            border: 1px solid #dbe8f4;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .stats-card ul {
+            margin: 0 0 10px;
+            padding-left: 18px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .card,
+        .project-entry {
+            background: #ffffff;
+            border: 1px solid #d9e4ef;
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .controls input,
+        .controls select {
+            border: 1px solid #c8d8e8;
+            border-radius: 10px;
+            padding: 10px;
+            font: inherit;
+            background: #ffffff;
+            color: var(--text);
+        }
+
+        .controls input {
+            flex: 1 1 260px;
+        }
+
+        .controls select {
+            min-width: 150px;
+        }
+
+        .stack {
+            display: grid;
+            gap: 10px;
+        }
+
+        .course-list {
+            columns: 2;
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chips span {
+            background: #ddeaf6;
+            color: #26435e;
+            border-radius: 999px;
+            padding: 7px 11px;
+            font-size: 0.92rem;
+            border: 1px solid #c8daeb;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin: 0;
+        }
+
+        .site-footer {
+            padding: 24px 0 34px;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* Skylabs expand button */
+        .skylabs-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            padding: 7px 14px;
+            background: #e8f4ff;
+            border: 1px solid #b8d8f4;
+            border-radius: 10px;
+            color: var(--accent-strong);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .skylabs-btn:hover {
+            background: #d4eafc;
+            border-color: #9fc9ee;
+        }
+
+        .skylabs-btn .arrow {
+            display: inline-block;
+            font-size: 1.1rem;
+            line-height: 1;
+            transition: transform 0.25s ease;
+        }
+
+        .skylabs-btn.open .arrow {
+            transform: rotate(90deg);
+        }
+
+        .skylabs-details {
+            display: none;
+            margin-top: 12px;
+            padding: 14px 16px;
+            background: #f0f8ff;
+            border: 1px solid #c8e0f4;
+            border-radius: 12px;
+            font-size: 0.94rem;
+            line-height: 1.65;
+            animation: fadeSlide 0.22s ease;
+        }
+
+        .skylabs-details.open {
+            display: block;
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skylabs-details ul {
+            margin: 8px 0 0;
+            padding-left: 18px;
+        }
+
+        .skylabs-details li {
+            margin-bottom: 4px;
+        }
+
+        /* LLM dropdown area */
+        .top-areas-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .top-areas-list li {
+            font-size: 0.95rem;
+        }
+
+        .llm-toggle {
+            background: none;
+            border: none;
+            padding: 0;
+            color: var(--accent-strong);
+            font: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .llm-toggle .arrow {
+            display: inline-block;
+            font-size: 1.1rem;
+            line-height: 1;
+            transition: transform 0.2s;
+        }
+
+        .llm-toggle.open .arrow {
+            transform: rotate(90deg);
+        }
+
+        .llm-sub {
+            display: none;
+            margin-top: 6px;
+            padding: 8px 12px;
+            background: #eaf4ff;
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            list-style: disc;
+            padding-left: 28px;
+            animation: fadeSlide 0.18s ease;
+        }
+
+        .llm-sub.open {
+            display: block;
+        }
+
+        .llm-sub li {
+            font-size: 0.88rem;
+            color: #2d4a62;
+            margin-bottom: 2px;
+        }
+
+        @media (max-width: 860px) {
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-actions {
+                justify-content: flex-start;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-list {
+                columns: 1;
+            }
+
+            .panel {
+                scroll-margin-top: 210px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -16,12 +425,12 @@
             <div class="header-top">
                 <div class="brand">
                     <h1>Mohammad Fatim Shoaib</h1>
-                    <p>BSCS @ LUMS � ML Researcher � LLM compression and quantization</p>
+                    <p>Final Semester @ LUMS | Expertise in Diffusion Models, AI on edge devices, and building agentic
+                        workflows</p>
                 </div>
 
                 <div class="header-actions">
-                    <a class="btn" href="Mohammad_Fatim_Shoaib_Resume_ML.pdf" download>Resume (ML)</a>
-                    <a class="btn btn-ghost" href="Mohammad Fatim Shoaib - CV.pdf" download>CV</a>
+                    <a class="btn" href="Mohammad_Fatim_Shoaib_Resume_ML.pdf" download>Resume</a>
                 </div>
             </div>
 
@@ -44,30 +453,68 @@
                     <h2>About</h2>
                     <p>
                         I am a computer science student at LUMS with research and project experience in LLM compression,
-                        post-training quantization for diffusion models, and agentic AI systems.
+                        post-training quantization for diffusion models, and agentic AI systems. I currently work as an
+                        <strong>AI Intern at <a href="https://www.linkedin.com/company/skylabs-ai/" target="_blank"
+                                rel="noreferrer">Skylabs AI</a></strong> (July 2025 – Present).
                     </p>
+
+                    <button class="skylabs-btn" id="skylabsToggle" aria-expanded="false">
+                        <i class="arrow">›</i> What I do at Skylabs AI
+                    </button>
+
+                    <div class="skylabs-details" id="skylabsDetails" role="region" aria-labelledby="skylabsToggle">
+                        <p>At Skylabs AI, my work sits at the intersection of applied AI research and engineering. My
+                            primary focus is designing and building <strong>agentic AI pipelines</strong> — systems
+                            where multiple AI agents collaborate to complete complex, multi-step tasks autonomously.</p>
+                        <ul>
+                            <li>Built and iterated on agentic pipelines using <strong>Google ADK</strong>, the
+                                <strong>Google AI Studio API</strong>, and <strong>OpenRouter</strong> to power
+                                multi-model workflows.</li>
+                            <li>Adapted a <strong>state-of-the-art Google research paper</strong>, re-engineering its
+                                methodology for internal company use cases.</li>
+                            <li>Spearhead <strong>synthetic data generation</strong> initiatives — designing agentic
+                                pipelines that produce high-quality training data at scale, along with automated
+                                verification layers to ensure data fidelity and usefulness.</li>
+                        </ul>
+                    </div>
+
                     <ul class="meta-list">
                         <li><strong>Location:</strong> Lahore, Pakistan</li>
-                        <li><strong>Email:</strong> <a href="mailto:mfatim.shoaib@gmail.com">mfatim.shoaib@gmail.com</a></li>
+                        <li><strong>Email:</strong> mfatim.shoaib&#64;gmail.com</li>
                         <li><strong>Phone:</strong> +92 3202020325</li>
-                        <li><strong>Education:</strong> BSc Computer Science, LUMS (expected 2026)</li>
+                        <li><strong>Education:</strong> BSc Computer Science, LUMS (expected 2026)
+                            <ul style="margin: 4px 0 0; padding-left: 18px;">
+                                <li>Exchange Semester — Fall 2024, GIST (Gwangju Institute of Science and Technology),
+                                    South Korea</li>
+                            </ul>
+                        </li>
                     </ul>
-                    <p class="inline-links">
-                        <a href="About Me.pdf" download>Download About Me</a>
-                        <a href="Experiences.pdf" download>Full Experiences (PDF)</a>
-                    </p>
                 </div>
 
                 <aside class="stats-card">
                     <h3>Quick Stats</h3>
                     <ul>
                         <li>CGPA ~3.5</li>
-                        <li>Dean's Honour List</li>
-                        <li>Exchange at GIST (Aug-Dec 2024)</li>
+                        <li>First Year Dean's Honour List</li>
                     </ul>
                     <h4>Top Areas</h4>
-                    <p>LLM compression, Hessian PTQ for diffusion, agentic RAG systems, spatial transcriptomics,
-                        Flutter apps.</p>
+                    <ul class="top-areas-list">
+                        <li>Multi-Modal Diffusion Models</li>
+                        <li>AI on Edge Devices</li>
+                        <li>
+                            <button class="llm-toggle" id="llmToggle" aria-expanded="false">
+                                <i class="arrow">›</i> Large Language Model Systems
+                            </button>
+                            <ul class="llm-sub" id="llmSub" role="list">
+                                <li>LLM Fine-tuning</li>
+                                <li>RAG</li>
+                                <li>LLM Compression</li>
+                                <li>LLM Deployment</li>
+                                <li>LLM Integration</li>
+                            </ul>
+                        </li>
+                        <li>AI Agentic Pipelines</li>
+                    </ul>
                 </aside>
             </div>
         </section>
@@ -79,14 +526,14 @@
                     <h3>LLM Compression</h3>
                     <p>Research on Wanda-based sparse pruning and contrastive pruning techniques for stronger
                         compression while preserving performance.</p>
-                    <p class="meta">LUMS � Jan-May 2025</p>
+                    <p class="meta">LUMS · Jan-May 2025</p>
                 </article>
 
                 <article class="card">
                     <h3>Hessian 4-bit PTQ for Diffusion</h3>
                     <p>Post-training quantization pipeline with Hessian-informed corrections and block-wise
                         reconstruction for SDXL-style diffusion models.</p>
-                    <p class="meta">10xEngineers collaboration � Ongoing</p>
+                    <p class="meta">10xEngineers collaboration · Ongoing</p>
                 </article>
 
                 <article class="card">
@@ -114,14 +561,16 @@
             <div id="projectList" class="stack">
                 <article class="project-entry" data-type="research" data-tech="langchain gemini mistral python rag">
                     <h3>Agentic Framework for Business Data Analysis</h3>
-                    <p>LLM-based multi-agent pipeline for automated EDA and ML with RAG over 800+ local case studies.</p>
+                    <p>LLM-based multi-agent pipeline for automated EDA and ML with RAG over 800+ local case studies.
+                    </p>
                     <p class="meta">Tech: Python, LangChain, ChromaDB/FAISS, Gemini API, Mistral-7B</p>
                 </article>
 
                 <article class="project-entry" data-type="research"
                     data-tech="pytorch bitsandbytes sdxl quantization hessian">
                     <h3>Hessian-Based 4-bit PTQ for Diffusion Models</h3>
-                    <p>PTQ approach using second-order information and reconstruction for compressed diffusion models.</p>
+                    <p>PTQ approach using second-order information and reconstruction for compressed diffusion models.
+                    </p>
                     <p class="meta">Tech: PyTorch, bitsandbytes, NumPy, CLIP/LPIPS metrics</p>
                 </article>
 
@@ -170,7 +619,8 @@
             <h2>Skills</h2>
             <div class="chips">
                 <span>Python</span><span>C++</span><span>TypeScript</span><span>PyTorch</span><span>TensorFlow</span>
-                <span>LangChain</span><span>Hugging Face</span><span>ChromaDB</span><span>FAISS</span><span>Flutter</span>
+                <span>LangChain</span><span>Hugging
+                    Face</span><span>ChromaDB</span><span>FAISS</span><span>Flutter</span>
                 <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Socket.IO</span>
             </div>
         </section>
@@ -178,6 +628,14 @@
         <section id="experience" class="wrap section panel">
             <h2>Experience</h2>
             <div class="card-grid">
+                <article class="card">
+                    <h3>AI Intern – <a href="https://www.linkedin.com/company/skylabs-ai/" target="_blank"
+                            rel="noreferrer">Skylabs AI</a></h3>
+                    <p class="meta">2025 – Present</p>
+                    <p>Building agentic pipelines for synthetic data generation and verification; adapted a
+                        state-of-the-art Google paper for internal use.</p>
+                </article>
+
                 <article class="card">
                     <h3>Research Intern - LLM Compression (LUMS)</h3>
                     <p class="meta">Jan 2025 - May 2025</p>
@@ -204,7 +662,7 @@
 
         <section id="contact" class="wrap section panel panel-alt">
             <h2>Contact</h2>
-            <p><strong>Email:</strong> <a href="mailto:mfatim.shoaib@gmail.com">mfatim.shoaib@gmail.com</a></p>
+            <p><strong>Email:</strong> mfatim.shoaib&#64;gmail.com</p>
             <p><strong>Phone:</strong> +92 3202020325</p>
             <p><strong>GitHub:</strong> <a href="https://github.com/fatim-shoaib" target="_blank"
                     rel="noreferrer">github.com/fatim-shoaib</a></p>
@@ -215,11 +673,12 @@
 
     <footer class="site-footer">
         <div class="wrap">
-            <p>� 2026 Mohammad Fatim Shoaib</p>
+            <p>© 2026 Mohammad Fatim Shoaib</p>
         </div>
     </footer>
 
     <script>
+        // Project filter
         (function () {
             const search = document.getElementById('projectSearch');
             const filter = document.getElementById('projectFilter');
@@ -228,7 +687,6 @@
             function render() {
                 const q = (search.value || '').toLowerCase();
                 const t = filter.value;
-
                 list.forEach((el) => {
                     const text = (el.textContent || '').toLowerCase();
                     const matchesQ = q === '' || text.indexOf(q) !== -1;
@@ -240,6 +698,30 @@
             search.addEventListener('input', render);
             filter.addEventListener('change', render);
             render();
+        })();
+
+        // Skylabs AI toggle
+        (function () {
+            const btn = document.getElementById('skylabsToggle');
+            const details = document.getElementById('skylabsDetails');
+
+            btn.addEventListener('click', function () {
+                const isOpen = details.classList.toggle('open');
+                btn.classList.toggle('open', isOpen);
+                btn.setAttribute('aria-expanded', String(isOpen));
+            });
+        })();
+
+        // LLM sub-list toggle
+        (function () {
+            const toggle = document.getElementById('llmToggle');
+            const sub = document.getElementById('llmSub');
+
+            toggle.addEventListener('click', function () {
+                const isOpen = sub.classList.toggle('open');
+                toggle.classList.toggle('open', isOpen);
+                toggle.setAttribute('aria-expanded', String(isOpen));
+            });
         })();
     </script>
 </body>
