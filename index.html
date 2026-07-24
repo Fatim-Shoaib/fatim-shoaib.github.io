@@ -4,726 +4,645 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mohammad Fatim Shoaib - Portfolio</title>
+    <title>Mohammad Fatim Shoaib — AI Research Engineer</title>
     <meta name="description"
-        content="Mohammad Fatim Shoaib - Final Semester @ LUMS | Expertise in Diffusion Models, AI on edge devices, and building agentic workflows" />
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
-
-        :root {
-            --bg: #f2f6fa;
-            --surface: #ffffff;
-            --surface-alt: #eef3f8;
-            --text: #1a2b3c;
-            --muted: #5d6f82;
-            --line: #d9e4ef;
-            --accent: #0077cc;
-            --accent-strong: #005c9e;
-            --maxw: 1080px;
-            --radius: 14px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-            color: var(--text);
-            background:
-                radial-gradient(circle at 10% -10%, #d6e8f9 0%, transparent 40%),
-                radial-gradient(circle at 90% -15%, #d9f5ef 0%, transparent 35%),
-                var(--bg);
-            line-height: 1.6;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: "Space Grotesk", "Segoe UI", sans-serif;
-            line-height: 1.25;
-            margin-top: 0;
-        }
-
-        a {
-            color: var(--accent);
-        }
-
-        a:hover {
-            color: var(--accent-strong);
-        }
-
-        .wrap {
-            max-width: var(--maxw);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            border-bottom: 1px solid var(--line);
-            background: rgba(242, 246, 250, 0.95);
-            backdrop-filter: blur(8px);
-        }
-
-        .header-top {
-            padding: 16px 0 10px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 18px;
-        }
-
-        .brand h1 {
-            margin-bottom: 4px;
-            font-size: clamp(1.5rem, 2.4vw, 2rem);
-        }
-
-        .brand p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.96rem;
-        }
-
-        .main-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 10px 0 14px;
-        }
-
-        .main-nav a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #2d4155;
-            background: #e8eef5;
-            border: 1px solid #d3deea;
-            border-radius: 999px;
-            padding: 7px 12px;
-            transition: all 0.2s ease;
-        }
-
-        .main-nav a:hover {
-            background: #dce8f3;
-            border-color: #c7d7e8;
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        .btn {
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 10px;
-            border: 1px solid transparent;
-            padding: 9px 13px;
-            background: var(--accent);
-            color: #ffffff;
-        }
-
-        .btn:hover {
-            color: #ffffff;
-            background: var(--accent-strong);
-        }
-
-        .section {
-            padding-top: 22px;
-        }
-
-        .panel {
-            background: var(--surface);
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            padding-top: 24px;
-            padding-bottom: 24px;
-            margin-top: 20px;
-            box-shadow: 0 6px 22px rgba(16, 42, 67, 0.05);
-            scroll-margin-top: 160px;
-        }
-
-        .panel-alt {
-            background: var(--surface-alt);
-        }
-
-        .hero-panel {
-            margin-top: 26px;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 20px;
-            align-items: start;
-        }
-
-        .meta-list {
-            padding-left: 18px;
-            margin: 14px 0;
-        }
-
-        .stats-card {
-            background: #f7fbff;
-            border: 1px solid #dbe8f4;
-            border-radius: 12px;
-            padding: 16px;
-        }
-
-        .stats-card ul {
-            margin: 0 0 10px;
-            padding-left: 18px;
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 14px;
-        }
-
-        .card,
-        .project-entry {
-            background: #ffffff;
-            border: 1px solid #d9e4ef;
-            border-radius: 12px;
-            padding: 14px;
-        }
-
-        .controls {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 12px;
-        }
-
-        .controls input,
-        .controls select {
-            border: 1px solid #c8d8e8;
-            border-radius: 10px;
-            padding: 10px;
-            font: inherit;
-            background: #ffffff;
-            color: var(--text);
-        }
-
-        .controls input {
-            flex: 1 1 260px;
-        }
-
-        .controls select {
-            min-width: 150px;
-        }
-
-        .stack {
-            display: grid;
-            gap: 10px;
-        }
-
-        .course-list {
-            columns: 2;
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .chips span {
-            background: #ddeaf6;
-            color: #26435e;
-            border-radius: 999px;
-            padding: 7px 11px;
-            font-size: 0.92rem;
-            border: 1px solid #c8daeb;
-        }
-
-        .meta {
-            color: var(--muted);
-            font-size: 0.92rem;
-            margin: 0;
-        }
-
-        .site-footer {
-            padding: 24px 0 34px;
-            text-align: center;
-            color: var(--muted);
-        }
-
-        /* Skylabs expand button */
-        .skylabs-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 10px;
-            padding: 7px 14px;
-            background: #e8f4ff;
-            border: 1px solid #b8d8f4;
-            border-radius: 10px;
-            color: var(--accent-strong);
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0.2s;
-        }
-
-        .skylabs-btn:hover {
-            background: #d4eafc;
-            border-color: #9fc9ee;
-        }
-
-        .skylabs-btn .arrow {
-            display: inline-block;
-            font-size: 1.1rem;
-            line-height: 1;
-            transition: transform 0.25s ease;
-        }
-
-        .skylabs-btn.open .arrow {
-            transform: rotate(90deg);
-        }
-
-        .skylabs-details {
-            display: none;
-            margin-top: 12px;
-            padding: 14px 16px;
-            background: #f0f8ff;
-            border: 1px solid #c8e0f4;
-            border-radius: 12px;
-            font-size: 0.94rem;
-            line-height: 1.65;
-            animation: fadeSlide 0.22s ease;
-        }
-
-        .skylabs-details.open {
-            display: block;
-        }
-
-        @keyframes fadeSlide {
-            from {
-                opacity: 0;
-                transform: translateY(-6px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .skylabs-details ul {
-            margin: 8px 0 0;
-            padding-left: 18px;
-        }
-
-        .skylabs-details li {
-            margin-bottom: 4px;
-        }
-
-        /* LLM dropdown area */
-        .top-areas-list {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .top-areas-list li {
-            font-size: 0.95rem;
-        }
-
-        .llm-toggle {
-            background: none;
-            border: none;
-            padding: 0;
-            color: var(--accent-strong);
-            font: inherit;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .llm-toggle .arrow {
-            display: inline-block;
-            font-size: 1.1rem;
-            line-height: 1;
-            transition: transform 0.2s;
-        }
-
-        .llm-toggle.open .arrow {
-            transform: rotate(90deg);
-        }
-
-        .llm-sub {
-            display: none;
-            margin-top: 6px;
-            padding: 8px 12px;
-            background: #eaf4ff;
-            border-left: 3px solid var(--accent);
-            border-radius: 0 8px 8px 0;
-            list-style: disc;
-            padding-left: 28px;
-            animation: fadeSlide 0.18s ease;
-        }
-
-        .llm-sub.open {
-            display: block;
-        }
-
-        .llm-sub li {
-            font-size: 0.88rem;
-            color: #2d4a62;
-            margin-bottom: 2px;
-        }
-
-        @media (max-width: 860px) {
-            .header-top {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .header-actions {
-                justify-content: flex-start;
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .course-list {
-                columns: 1;
-            }
-
-            .panel {
-                scroll-margin-top: 210px;
-            }
-        }
-    </style>
+        content="Mohammad Fatim Shoaib — AI Research Engineer I at Skylabs AI. Research in vision-language models, diffusion, distributed LLM training, model compression, and mechanistic interpretability. ICML 2026 Workshop co-author." />
+    <meta name="author" content="Mohammad Fatim Shoaib" />
+    <meta property="og:title" content="Mohammad Fatim Shoaib — AI Research Engineer" />
+    <meta property="og:description"
+        content="Vision-language models, diffusion, distributed LLM training, and model compression. ICML 2026 Workshop co-author." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="wrap">
-            <div class="header-top">
-                <div class="brand">
-                    <h1>Mohammad Fatim Shoaib</h1>
-                    <p>Final Semester @ LUMS | Expertise in Diffusion Models, AI on edge devices, and building agentic
-                        workflows</p>
-                </div>
+    <div class="bg-glow" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
 
-                <div class="header-actions">
-                    <a class="btn" href="Mohammad_Fatim_Shoaib_Resume_ML.pdf" download>Resume</a>
-                </div>
-            </div>
-
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="#about">About</a>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header" id="siteHeader">
+        <div class="wrap nav">
+            <a href="#top" class="logo"><span class="dot"></span>Fatim Shoaib</a>
+            <nav class="nav-links" id="navLinks" aria-label="Primary">
                 <a href="#research">Research</a>
-                <a href="#projects">Projects</a>
-                <a href="#courses">Coursework</a>
-                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
                 <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
+                <a href="Mohammad_Fatim_Shoaib_Resume.pdf" class="nav-cta" download>Résumé</a>
             </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
         </div>
     </header>
 
     <main>
-        <section id="about" class="wrap section panel hero-panel">
-            <div class="hero-grid">
-                <div>
-                    <h2>About</h2>
-                    <p>
-                        I am a computer science student at LUMS with research and project experience in LLM compression,
-                        post-training quantization for diffusion models, and agentic AI systems. I currently work as an
-                        <strong>AI Intern at <a href="https://www.linkedin.com/company/skylabs-ai/" target="_blank"
-                                rel="noreferrer">Skylabs AI</a></strong> (July 2025 – Present).
-                    </p>
-
-                    <button class="skylabs-btn" id="skylabsToggle" aria-expanded="false">
-                        <i class="arrow">›</i> What I do at Skylabs AI
-                    </button>
-
-                    <div class="skylabs-details" id="skylabsDetails" role="region" aria-labelledby="skylabsToggle">
-                        <p>At Skylabs AI, my work sits at the intersection of applied AI research and engineering. My
-                            primary focus is designing and building <strong>agentic AI pipelines</strong> — systems
-                            where multiple AI agents collaborate to complete complex, multi-step tasks autonomously.</p>
-                        <ul>
-                            <li>Built and iterated on agentic pipelines using <strong>Google ADK</strong>, the
-                                <strong>Google AI Studio API</strong>, and <strong>OpenRouter</strong> to power
-                                multi-model workflows.</li>
-                            <li>Adapted a <strong>state-of-the-art Google research paper</strong>, re-engineering its
-                                methodology for internal company use cases.</li>
-                            <li>Spearhead <strong>synthetic data generation</strong> initiatives — designing agentic
-                                pipelines that produce high-quality training data at scale, along with automated
-                                verification layers to ensure data fidelity and usefulness.</li>
-                        </ul>
+        <!-- ================= HERO ================= -->
+        <section class="hero wrap">
+            <div class="reveal">
+                <span class="hero-badge">
+                    <span class="pulse"></span> Available for AI / ML research &amp; engineering roles
+                </span>
+                <h1>Building <span class="grad-text">efficient, reliable AI</span><br />— and understanding why it works.</h1>
+                <p class="hero-sub">
+                    I'm <strong>Mohammad Fatim Shoaib</strong>, an <strong>AI Research Engineer I at Skylabs AI</strong>
+                    and a final-year CS (AI) student at LUMS. I work across vision-language models, diffusion,
+                    distributed LLM training, and model compression — pairing systems that ship with the mechanistic
+                    understanding of <em>why</em> they behave the way they do.
+                </p>
+                <div class="hero-tags" aria-hidden="true">
+                    <span>Vision-Language Models</span>
+                    <span>Diffusion &amp; Generative</span>
+                    <span>Distributed LLM Training</span>
+                    <span>Model Compression</span>
+                    <span>Mechanistic Interpretability</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#research" class="btn btn-primary">
+                        View research
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    </a>
+                    <a href="Mohammad_Fatim_Shoaib_Resume.pdf" class="btn btn-ghost" download>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16" /></svg>
+                        Download résumé
+                    </a>
+                    <div class="hero-socials">
+                        <a href="https://github.com/Fatim-Shoaib" target="_blank" rel="noreferrer" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z" /></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohammad-fatim-shoaib/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9z" /></svg>
+                        </a>
+                        <a href="mailto:mfatim.shoaib@gmail.com" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                        </a>
                     </div>
-
-                    <ul class="meta-list">
-                        <li><strong>Location:</strong> Lahore, Pakistan</li>
-                        <li><strong>Email:</strong> mfatim.shoaib&#64;gmail.com</li>
-                        <li><strong>Phone:</strong> +92 3202020325</li>
-                        <li><strong>Education:</strong> BSc Computer Science, LUMS (expected 2026)
-                            <ul style="margin: 4px 0 0; padding-left: 18px;">
-                                <li>Exchange Semester — Fall 2024, GIST (Gwangju Institute of Science and Technology),
-                                    South Korea</li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
 
-                <aside class="stats-card">
-                    <h3>Quick Stats</h3>
-                    <ul>
-                        <li>CGPA ~3.5</li>
-                        <li>First Year Dean's Honour List</li>
+                <div class="hero-stats">
+                    <div>
+                        <div class="stat-num grad-text">ICML '26</div>
+                        <div class="stat-label">Workshop paper accepted</div>
+                    </div>
+                    <div>
+                        <div class="stat-num grad-text">2</div>
+                        <div class="stat-label">Published research studies</div>
+                    </div>
+                    <div>
+                        <div class="stat-num grad-text">20+</div>
+                        <div class="stat-label">Projects across AI / ML</div>
+                    </div>
+                    <div>
+                        <div class="stat-num grad-text">3</div>
+                        <div class="stat-label">Research labs · LUMS · GIST · Skylabs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FEATURED RESEARCH ================= -->
+        <section id="research" class="wrap">
+            <div class="reveal">
+                <p class="eyebrow">Featured research</p>
+                <h2 class="section-title">Selected research &amp; publications</h2>
+                <p class="section-intro">
+                    Controlled, mechanistic studies of how modern models actually behave — from federated learning to
+                    vision-language hallucination and diffusion quantization.
+                </p>
+            </div>
+
+            <div class="featured-grid">
+                <article class="feature-card span-2 reveal">
+                    <div class="glow"></div>
+                    <span class="feature-tag">◆ ICML 2026 Workshop · Mechanistic Interpretability</span>
+                    <h3>Preserved-but-Misaligned Representations in Non-IID FedAvg</h3>
+                    <p>
+                        Co-authored study showing that FedAvg's accuracy collapse under non-IID data is
+                        <strong style="color:var(--text)">representation misalignment, not forgetting</strong>:
+                        class-specific circuits survive aggregation, but the global classifier head can no longer read
+                        them. Evidence via L0-sparse circuit identification, a Universal Sparse Autoencoder, linear
+                        probing, and SVCCA geometry.
+                    </p>
+                    <div class="feature-metrics">
+                        <div><span class="m-num grad-text">~0%</span><span class="m-lab">end-to-end acc. for collapsed classes…</span></div>
+                        <div><span class="m-num grad-text">recoverable</span><span class="m-lab">…yet circuits stay highly functional</span></div>
+                        <div><span class="m-num grad-text">SVCCA</span><span class="m-lab">shared sparse basis, IID vs non-IID</span></div>
+                    </div>
+                    <a class="feature-link" href="https://openreview.net/forum?id=WR8w3MJM2a" target="_blank" rel="noreferrer">
+                        Read on OpenReview
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                    </a>
+                </article>
+
+                <article class="feature-card cyan reveal">
+                    <div class="glow"></div>
+                    <span class="feature-tag">◆ Vision-Language · Published + code</span>
+                    <h3>Whitening Rotates, Architecture Mediates</h3>
+                    <p>
+                        A readout-alignment account of how CLIP feature whitening affects object hallucination in
+                        connector-only VLMs. ZCA whitening <strong style="color:var(--text)">cuts hallucination for a
+                        Q-Former but worsens it for MLP connectors</strong> — localized to decision-margin geometry, not
+                        perception.
+                    </p>
+                    <div class="feature-metrics">
+                        <div><span class="m-num grad-text">0.63→0.41</span><span class="m-lab">Q-Former FPR (POPE, popular)</span></div>
+                        <div><span class="m-num grad-text">r = −0.85</span><span class="m-lab">transfer to 80-cat CHAIR probe</span></div>
+                    </div>
+                    <a class="feature-link" href="https://github.com/Fatim-Shoaib/ZCA-VLM" target="_blank" rel="noreferrer">
+                        Code &amp; eval suite on GitHub
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                    </a>
+                </article>
+
+                <article class="feature-card pink reveal">
+                    <div class="glow"></div>
+                    <span class="feature-tag">◆ Edge AI · Industry collaboration (10xEngineers)</span>
+                    <h3>Log-SNR &amp; Hessian-Based Diffusion Quantization</h3>
+                    <p>
+                        Dynamic activation quantization keyed on <strong style="color:var(--text)">log-SNR instead of raw
+                        timestep</strong>, plus Hessian-based 4-bit weight PTQ (GPTQ / Qronos) for diffusion
+                        transformers — near-FP16 fidelity at a fraction of the size.
+                    </p>
+                    <div class="feature-metrics">
+                        <div><span class="m-num grad-text">0.45→0.20</span><span class="m-lab">LPIPS on PixArt-α (−55%)</span></div>
+                        <div><span class="m-num grad-text">32.63</span><span class="m-lab">CLIP vs 32.65 FP16 baseline</span></div>
+                    </div>
+                    <a class="feature-link" href="https://github.com/Fatim-Shoaib/AI624-Diffusion-Quantization" target="_blank" rel="noreferrer">
+                        View on GitHub
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="wrap">
+            <div class="reveal">
+                <p class="eyebrow">About</p>
+                <h2 class="section-title">Where research meets shipping</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-body reveal">
+                    <p>
+                        I'm a final-year <strong>BSc Computer Science (specialization in Artificial Intelligence)</strong>
+                        student at LUMS, graduating June 2026, and an <strong>AI Research Engineer I at Skylabs AI</strong>
+                        (promoted from AI Intern). My work lives at the intersection of applied AI research and
+                        engineering — I like building systems that actually run, then digging into <em>why</em> they
+                        behave the way they do.
+                    </p>
+                    <p>
+                        At Skylabs I'm currently building <strong>efficient distributed, federated-style LLM training</strong>
+                        across heterogeneous cloud backends (in-house servers, AWS, RunPod) using DeepMind's DiLoCo
+                        low-communication algorithm. Earlier I improved open-source VLMs on a SOTA visual-reasoning
+                        benchmark and built autonomous &amp; human-in-the-loop agentic pipelines for VLM finetuning and
+                        synthetic data creation.
+                    </p>
+                    <p>
+                        Before that I researched <strong>pruning-based LLM compression</strong> at LUMS and
+                        <strong>image-captioning architectures</strong> at GIST's Machine Learning &amp; Computer Vision
+                        Lab in South Korea. Across coursework and research I've implemented DDPM, RLHF (PPO/DPO/GRPO/RLVR),
+                        knowledge distillation, and VLM connectors from scratch — and co-authored work accepted at an ICML
+                        2026 workshop.
+                    </p>
+                </div>
+
+                <aside class="about-card reveal">
+                    <h4>Focus areas</h4>
+                    <ul class="focus-list">
+                        <li><span class="ico">🖼️</span> Vision-language models &amp; multimodality</li>
+                        <li><span class="ico">🌀</span> Diffusion &amp; generative models</li>
+                        <li><span class="ico">🧩</span> Distributed &amp; federated LLM training</li>
+                        <li><span class="ico">🗜️</span> Model compression &amp; edge AI</li>
+                        <li><span class="ico">🔬</span> Mechanistic interpretability</li>
+                        <li><span class="ico">🤖</span> Agentic LLM systems &amp; RAG</li>
                     </ul>
-                    <h4>Top Areas</h4>
-                    <ul class="top-areas-list">
-                        <li>Multi-Modal Diffusion Models</li>
-                        <li>AI on Edge Devices</li>
-                        <li>
-                            <button class="llm-toggle" id="llmToggle" aria-expanded="false">
-                                <i class="arrow">›</i> Large Language Model Systems
-                            </button>
-                            <ul class="llm-sub" id="llmSub" role="list">
-                                <li>LLM Fine-tuning</li>
-                                <li>RAG</li>
-                                <li>LLM Compression</li>
-                                <li>LLM Deployment</li>
-                                <li>LLM Integration</li>
-                            </ul>
-                        </li>
-                        <li>AI Agentic Pipelines</li>
-                    </ul>
+                    <div class="edu-block">
+                        <h4 style="margin-bottom:14px">Education</h4>
+                        <div class="edu-item">
+                            <div class="deg">BSc Computer Science (AI)</div>
+                            <div class="sch">LUMS · First-year Dean's Honour List</div>
+                            <div class="yr">Aug 2022 – Jun 2026</div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="deg">Exchange Semester</div>
+                            <div class="sch">GIST, South Korea · Deep Learning &amp; NLP</div>
+                            <div class="yr">Aug 2024 – Dec 2024</div>
+                        </div>
+                    </div>
                 </aside>
             </div>
         </section>
 
-        <section id="research" class="wrap section panel">
-            <h2>Research Highlights</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3>LLM Compression</h3>
-                    <p>Research on Wanda-based sparse pruning and contrastive pruning techniques for stronger
-                        compression while preserving performance.</p>
-                    <p class="meta">LUMS · Jan-May 2025</p>
-                </article>
+        <!-- ================= EXPERIENCE ================= -->
+        <section id="experience" class="wrap">
+            <div class="reveal">
+                <p class="eyebrow">Experience</p>
+                <h2 class="section-title">Roles &amp; research positions</h2>
+            </div>
 
-                <article class="card">
-                    <h3>Hessian 4-bit PTQ for Diffusion</h3>
-                    <p>Post-training quantization pipeline with Hessian-informed corrections and block-wise
-                        reconstruction for SDXL-style diffusion models.</p>
-                    <p class="meta">10xEngineers collaboration · Ongoing</p>
-                </article>
+            <div class="timeline reveal">
+                <div class="tl-item current">
+                    <div class="tl-head">
+                        <span class="tl-role">AI Research Engineer I</span>
+                        <span class="tl-org">Skylabs AI</span>
+                        <span class="tl-date">Jul 2025 – Present</span>
+                    </div>
+                    <ul>
+                        <li>Building efficient distributed, federated-style LLM training across heterogeneous clouds (in-house, AWS, RunPod) using DeepMind's DiLoCo low-communication algorithm.</li>
+                        <li>Improved open-source VLMs (multi-GPU) on a SOTA visual-reasoning benchmark.</li>
+                        <li>Created &amp; operated autonomous and human-in-the-loop agentic pipelines for VLM finetuning and synthetic data generation. <em>Promoted from AI Intern.</em></li>
+                    </ul>
+                    <div class="tl-tags"><span>DiLoCo</span><span>Distributed training</span><span>VLM</span><span>Agentic pipelines</span></div>
+                </div>
 
-                <article class="card">
-                    <h3>Agentic Data Analysis System</h3>
-                    <p>Multi-agent framework converting business queries into EDA and ML pipelines with RAG over
-                        Pakistan-focused documents.</p>
-                    <p class="meta">Python, LangChain, FAISS/ChromaDB</p>
-                </article>
+                <div class="tl-item">
+                    <div class="tl-head">
+                        <span class="tl-role">Research Intern — LLM Compression</span>
+                        <span class="tl-org">LUMS</span>
+                        <span class="tl-date">Jan 2025 – May 2025</span>
+                    </div>
+                    <ul>
+                        <li>Researched pruning-based LLM compression (Wanda, magnitude pruning) and developed a novel contrastive-pruning approach giving better accuracy at higher sparsity.</li>
+                        <li>Grounded the work in a literature review on compression and mechanistic interpretability.</li>
+                    </ul>
+                    <div class="tl-tags"><span>Wanda</span><span>Contrastive pruning</span><span>Sparsity</span></div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-head">
+                        <span class="tl-role">Research Intern — ML &amp; Computer Vision Lab</span>
+                        <span class="tl-org">GIST, South Korea</span>
+                        <span class="tl-date">Aug 2024 – Dec 2024</span>
+                    </div>
+                    <ul>
+                        <li>Developed &amp; evaluated four image-captioning architectures (LSTM, skip-connections, spatial attention, multi-head self-attention) on Flickr8k with BLEU-1→4.</li>
+                        <li>Multi-head self-attention model achieved the best performance. Worked under Dr. Moongu Jeon's lab.</li>
+                    </ul>
+                    <div class="tl-tags"><span>Image captioning</span><span>Multi-head attention</span><span>BLEU</span></div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-head">
+                        <span class="tl-role">Teaching Assistant</span>
+                        <span class="tl-org">LUMS</span>
+                        <span class="tl-date">2023 – 2025</span>
+                    </div>
+                    <ul>
+                        <li>TA for Computational Problem Solving and Data Structures — designed &amp; ran labs, wrote and graded quizzes/assignments, held tutorials and office hours.</li>
+                    </ul>
+                    <div class="tl-tags"><span>Teaching</span><span>C++</span><span>Data structures</span></div>
+                </div>
             </div>
         </section>
 
-        <section id="projects" class="wrap section panel panel-alt">
-            <h2>Projects</h2>
-
-            <div class="controls">
-                <input id="projectSearch" placeholder="Search projects by title, tech, or type" />
-                <select id="projectFilter" aria-label="Filter projects">
-                    <option value="all">All</option>
-                    <option value="research">Research</option>
-                    <option value="personal">Personal</option>
-                    <option value="course">Coursework</option>
-                </select>
+        <!-- ================= PROJECTS ================= -->
+        <section id="projects" class="wrap">
+            <div class="reveal">
+                <p class="eyebrow">Projects</p>
+                <h2 class="section-title">Things I've built</h2>
+                <p class="section-intro">
+                    A cross-section of research and course projects — from diffusion and RLHF built from scratch to
+                    full-stack apps and low-level systems. Filter or search to explore.
+                </p>
             </div>
 
-            <div id="projectList" class="stack">
-                <article class="project-entry" data-type="research" data-tech="langchain gemini mistral python rag">
-                    <h3>Agentic Framework for Business Data Analysis</h3>
-                    <p>LLM-based multi-agent pipeline for automated EDA and ML with RAG over 800+ local case studies.
-                    </p>
-                    <p class="meta">Tech: Python, LangChain, ChromaDB/FAISS, Gemini API, Mistral-7B</p>
+            <div class="proj-controls reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="diffusion">Diffusion</button>
+                <button class="filter-btn" data-filter="vlm">Vision-Language</button>
+                <button class="filter-btn" data-filter="llm">LLM &amp; Agentic</button>
+                <button class="filter-btn" data-filter="edge">Compression &amp; Edge</button>
+                <button class="filter-btn" data-filter="systems">Systems</button>
+                <button class="filter-btn" data-filter="ml">ML Foundations</button>
+                <input type="search" class="proj-search" id="projSearch" placeholder="Search projects, tech…" aria-label="Search projects" />
+            </div>
+
+            <div class="proj-grid" id="projGrid">
+
+                <!-- ZCA-VLM -->
+                <article class="proj-card" data-cat="vlm" data-tech="clip q-former mlp pope zca whitening cka smollm2 qwen mechanistic interpretability hallucination vlm">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-vlm">Vision-Language</span>
+                        <div class="proj-links">
+                            <a href="https://github.com/Fatim-Shoaib/ZCA-VLM" target="_blank" rel="noreferrer" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>ZCA-VLM · Whitening &amp; Hallucination</h3>
+                    <p>Controlled study across 2 LMs, 3 connectors, and a continuous ZCA-whitening sweep on POPE, localizing the effect to readout alignment via linear probes, CKA, and McNemar tests.</p>
+                    <div class="proj-tech"><span>CLIP</span><span>Q-Former</span><span>POPE</span><span>CKA</span><span>SmolLM2</span></div>
                 </article>
 
-                <article class="project-entry" data-type="research"
-                    data-tech="pytorch bitsandbytes sdxl quantization hessian">
-                    <h3>Hessian-Based 4-bit PTQ for Diffusion Models</h3>
-                    <p>PTQ approach using second-order information and reconstruction for compressed diffusion models.
-                    </p>
-                    <p class="meta">Tech: PyTorch, bitsandbytes, NumPy, CLIP/LPIPS metrics</p>
+                <!-- DDPM -->
+                <article class="proj-card" data-cat="diffusion" data-tech="ddpm u-net ddim fid kid pytorch fashionmnist generative diffusion elbo">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-diffusion">Diffusion</span>
+                    </div>
+                    <h3>DDPM from Scratch</h3>
+                    <p>Full DDPM on FashionMNIST — forward process, closed-form posterior, ε-parameterized U-Net (1.93M), ancestral + DDIM samplers, and 3 controlled ablations. FID 70.48, KID 0.049.</p>
+                    <div class="proj-tech"><span>DDPM</span><span>U-Net</span><span>DDIM</span><span>FID/KID</span><span>PyTorch</span></div>
                 </article>
 
-                <article class="project-entry" data-type="course" data-tech="flutter nodejs mongodb">
-                    <h3>E-Fit - Flutter Fitness App</h3>
-                    <p>Cross-platform app with OTP auth, AI-generated plans, and Node.js + MongoDB backend.</p>
-                    <p class="meta">Tech: Flutter, Dart, Node.js, Express, MongoDB</p>
-                    <p><a href="https://github.com/fatim-shoaib/e-fit" target="_blank" rel="noreferrer">GitHub</a></p>
+                <!-- RLHF -->
+                <article class="proj-card" data-cat="llm" data-tech="ppo dpo grpo rlvr rlhf lora smollm2 reward model bradley-terry alignment reinforcement learning gsm8k">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-llm">LLM &amp; Agentic</span>
+                    </div>
+                    <h3>RLHF Algorithms from Scratch</h3>
+                    <p>PPO (GAE + clipped surrogate), DPO (Bradley-Terry), GRPO (critic-free), and RLVR built entirely in PyTorch with no RLHF library, plus an SFT + reward-model pipeline on SmolLM2.</p>
+                    <div class="proj-tech"><span>PPO</span><span>DPO</span><span>GRPO</span><span>RLVR</span><span>LoRA</span></div>
                 </article>
 
-                <article class="project-entry" data-type="course" data-tech="react nodejs socketio mern typescript">
-                    <h3>ColorGrid - Real-time MERN Game</h3>
-                    <p>2-player turn-based game with matchmaking, history, and leaderboard using Socket.IO.</p>
-                    <p class="meta">Tech: React, Node.js, Express, MongoDB, Socket.IO, TypeScript</p>
+                <!-- Diffusion Quantization -->
+                <article class="proj-card" data-cat="edge" data-tech="qronos gptq hessian ptq quantization log-snr pixart stable diffusion dit edge compression w8a8 4-bit">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-edge">Compression &amp; Edge</span>
+                        <div class="proj-links">
+                            <a href="https://github.com/Fatim-Shoaib/AI624-Diffusion-Quantization" target="_blank" rel="noreferrer" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>Log-SNR Diffusion Quantization</h3>
+                    <p>Industry collaboration with 10xEngineers: log-SNR-conditioned dynamic activation quantization + Hessian-based 4-bit weight PTQ for diffusion transformers, with a candid negative result on GPTQ vs Qronos.</p>
+                    <div class="proj-tech"><span>GPTQ</span><span>Qronos</span><span>Hessian PTQ</span><span>PixArt-α</span></div>
                 </article>
 
-                <article class="project-entry" data-type="course" data-tech="python numpy pytorch mnist">
-                    <h3>Neural Networks and MLP from Scratch</h3>
-                    <p>NumPy and PyTorch implementations for MNIST and related coursework experiments.</p>
-                    <p class="meta">Tech: Python, NumPy, PyTorch</p>
+                <!-- VLM connector replay -->
+                <article class="proj-card" data-cat="vlm" data-tech="clip smollm2 lora vqa catastrophic forgetting connector replay alpaca vision language">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-vlm">Vision-Language</span>
+                    </div>
+                    <h3>VLM Connector &amp; Language Replay</h3>
+                    <p>Built a connector-based VLM (frozen CLIP + MLP connector + LoRA SmolLM2) and ran a controlled replay-weight sweep showing a minimum replay weight prevents catastrophic forgetting — λ=0.2 hit 99.5% VQA.</p>
+                    <div class="proj-tech"><span>CLIP ViT-B/32</span><span>SmolLM2</span><span>LoRA</span><span>VQA</span></div>
                 </article>
 
-                <article class="project-entry" data-type="course" data-tech="c++ trees hashtable b+ trie">
-                    <h3>Data Structures Projects</h3>
-                    <p>AVL/BST, B+ trees, double hashing, trie, Huffman coding, external sort, and DNS simulation.</p>
-                    <p class="meta">Tech: C++</p>
+                <!-- DataWise AI -->
+                <article class="proj-card" data-cat="llm" data-tech="multi-agent llm gemini mistral langchain rag flask automl eda codebert codebleu agentic">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-llm">LLM &amp; Agentic</span>
+                    </div>
+                    <h3>DataWise AI — Multi-Agent EDA</h3>
+                    <p>Multi-agent LLM pipeline (Mistral 7B + Gemini) automating EDA and ML modeling from natural-language business queries for SMEs, with an agentic RAG module over 800+ PDFs. CodeBERT 0.75, CodeBLEU 0.64.</p>
+                    <div class="proj-tech"><span>Gemini</span><span>Mistral 7B</span><span>LangChain</span><span>RAG</span><span>Flask</span></div>
                 </article>
+
+                <!-- Knowledge Distillation -->
+                <article class="proj-card" data-cat="edge" data-tech="knowledge distillation vgg fitnet logit standardization cifar-100 ensemble compression kd">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-edge">Compression &amp; Edge</span>
+                    </div>
+                    <h3>Knowledge Distillation Study</h3>
+                    <p>Four-part KD study on CIFAR-100 (VGG16→VGG11): baseline KD, a logit-standardization rank-mismatch analysis (4.08% of test samples), FitNet hint distillation, and a 4-specialist ensemble.</p>
+                    <div class="proj-tech"><span>Knowledge Distillation</span><span>VGG</span><span>FitNet</span><span>CIFAR-100</span></div>
+                </article>
+
+                <!-- TVM -->
+                <article class="proj-card" data-cat="edge" data-tech="tvm tensorir relax metascheduler arm raspberry pi cross-compile resnet edge optimization latency">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-edge">Compression &amp; Edge</span>
+                    </div>
+                    <h3>TVM Edge Compiler Optimization</h3>
+                    <p>Cross-compiled &amp; optimized ML kernels through Apache TVM's TensorIR/Relax pipeline for a Raspberry Pi 4 (ARM Cortex-A72). Hand-scheduled MatMul+ReLU cut latency 11.42ms→2.10ms (−81.6%).</p>
+                    <div class="proj-tech"><span>Apache TVM</span><span>TensorIR</span><span>Relax</span><span>ARM</span></div>
+                </article>
+
+                <!-- RAG chatbots -->
+                <article class="proj-card" data-cat="llm" data-tech="rag langchain chroma faiss whisper gradio mistral voice retrieval chatbot embeddings">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-llm">LLM &amp; Agentic</span>
+                    </div>
+                    <h3>Voice-Enabled RAG Chatbots</h3>
+                    <p>Two RAG chatbots — one over transcribed 3Blue1Brown lectures (Whisper + Chroma), one over scraped LUMS content (FAISS + MiniLM) with conversational memory, guardrails, and a voice Gradio UI.</p>
+                    <div class="proj-tech"><span>LangChain</span><span>Chroma</span><span>FAISS</span><span>Whisper</span><span>Gradio</span></div>
+                </article>
+
+                <!-- Agentic patterns -->
+                <article class="proj-card" data-cat="llm" data-tech="agentic reflection tool-use multi-agent llama3 groq crew orchestrator patterns">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-llm">LLM &amp; Agentic</span>
+                    </div>
+                    <h3>Agentic Design Patterns</h3>
+                    <p>Implemented Reflection (generator/critic loop), Tool-use (auto-schema @tool decorator + ToolAgent), and Multi-agent Collaboration (Poet/Translator/Writer with a dependency-graph Crew) on Llama3-70B via Groq.</p>
+                    <div class="proj-tech"><span>Llama3-70B</span><span>Groq</span><span>Multi-agent</span></div>
+                </article>
+
+                <!-- Mistral QLoRA -->
+                <article class="proj-card" data-cat="llm" data-tech="mistral lora peft qlora 4-bit nf4 quantization trl sfttrainer finetuning medical chatbot">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-llm">LLM &amp; Agentic</span>
+                    </div>
+                    <h3>Mistral-7B QLoRA Fine-tune</h3>
+                    <p>Fine-tuned Mistral-7B-Instruct on a custom medical chat dataset with 4-bit NF4 quantization and LoRA (PEFT / trl SFTTrainer), then merged adapters back into the base model for inference.</p>
+                    <div class="proj-tech"><span>Mistral-7B</span><span>LoRA</span><span>PEFT</span><span>4-bit NF4</span></div>
+                </article>
+
+                <!-- LLM eval efficiency -->
+                <article class="proj-card" data-cat="edge" data-tech="t5 rouge bleu bertscore distillation quantization distilbert summarization evaluation compression llm">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-edge">Compression &amp; Edge</span>
+                    </div>
+                    <h3>LLM Efficiency &amp; Evaluation</h3>
+                    <p>Compared efficiency techniques: fine-tuned T5 summarizer benchmarked with ROUGE/BLEU/BERTScore + LLM-as-judge, 16-bit vs 4-bit Mistral inference profiling, and DistilBERT knowledge distillation + dynamic quantization.</p>
+                    <div class="proj-tech"><span>T5</span><span>BERTScore</span><span>DistilBERT</span><span>Quantization</span></div>
+                </article>
+
+                <!-- E-Fit -->
+                <article class="proj-card" data-cat="systems" data-tech="flutter dart node express mongodb gemini mobile fitness otp full-stack sensors">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-systems">Systems</span>
+                        <div class="proj-links">
+                            <a href="https://github.com/fatim-shoaib/e-fit" target="_blank" rel="noreferrer" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>E-Fit — Flutter Fitness App</h3>
+                    <p>Led development of a cross-platform fitness app (Flutter/Dart) with an AI backend (Node/Express + Gemini) generating personalized plans, sensor-based step counting, OTP recovery, and an analytics dashboard.</p>
+                    <div class="proj-tech"><span>Flutter</span><span>Node.js</span><span>MongoDB</span><span>Gemini</span></div>
+                </article>
+
+                <!-- ColorGrid -->
+                <article class="proj-card" data-cat="systems" data-tech="react node express mongodb socket.io typescript mern real-time game matchmaking leaderboard">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-systems">Systems</span>
+                    </div>
+                    <h3>ColorGrid — Real-time MERN Game</h3>
+                    <p>Real-time 2-player strategy game on the MERN stack with Socket.IO — matchmaking, turn-based state, connected-region win detection, live gameplay, game history, and a leaderboard, all with no page reloads.</p>
+                    <div class="proj-tech"><span>React</span><span>Socket.IO</span><span>Node.js</span><span>TypeScript</span></div>
+                </article>
+
+                <!-- Network Security -->
+                <article class="proj-card" data-cat="systems" data-tech="fastapi oauth jwt oracle cloud rop pwntools gdb buffer overflow csrf xss rsa security binary exploitation">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-systems">Systems</span>
+                    </div>
+                    <h3>Web &amp; Binary Security</h3>
+                    <p>Deployed a FastAPI app on Oracle Cloud (OAuth2, JWT, RBAC), attacked it with CSRF/stored XSS then hardened it; separately exploited SUID C binaries via buffer overflow and ret2libc/ROP, and built RSA from scratch.</p>
+                    <div class="proj-tech"><span>FastAPI</span><span>OAuth2/JWT</span><span>ROP</span><span>pwntools</span></div>
+                </article>
+
+                <!-- P2P DHT -->
+                <article class="proj-card" data-cat="systems" data-tech="c++ python sockets dht distributed hash table dijkstra bellman-ford udp reliable transport b+ tree trie networking systems">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-systems">Systems</span>
+                    </div>
+                    <h3>P2P DHT &amp; Reliable Transport</h3>
+                    <p>Built a peer-to-peer DHT file-sharing system (consistent hashing, node join/leave, failure tolerance), a reliable transport protocol over raw UDP, routing algorithms, and B+ Trees/Tries/AVL in C++.</p>
+                    <div class="proj-tech"><span>C++</span><span>DHT</span><span>UDP</span><span>Dijkstra</span></div>
+                </article>
+
+                <!-- Spatial transcriptomics -->
+                <article class="proj-card" data-cat="ml" data-tech="transformer attention pytorch genomics spatial transcriptomics healthcare scrna-seq cross-validation cancer">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-ml">ML Foundations</span>
+                    </div>
+                    <h3>Spatial Transcriptomics Transformer</h3>
+                    <p>Transformer-encoder model predicting cell counts per spot from gene expression — built a 100k-spot synthetic set from 10 cancer scRNA-seq datasets; best fold reached Pearson r ~0.976, applied to real colorectal data.</p>
+                    <div class="proj-tech"><span>Transformer</span><span>PyTorch</span><span>Genomics</span></div>
+                </article>
+
+                <!-- DL from scratch -->
+                <article class="proj-card" data-cat="ml" data-tech="numpy cnn rnn lstm seq2seq attention backpropagation adam im2col bptt from scratch deep learning gradient checker">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-ml">ML Foundations</span>
+                    </div>
+                    <h3>Deep Learning from Scratch (NumPy)</h3>
+                    <p>Implemented losses, optimizers (SGD/Adam), an MLP, a convolutional layer (naive + im2col), a vanilla RNN and LSTM (BPTT), and a Seq2Seq encoder-decoder with dot-product attention — all in pure NumPy.</p>
+                    <div class="proj-tech"><span>NumPy</span><span>CNN/RNN/LSTM</span><span>Seq2Seq</span><span>BPTT</span></div>
+                </article>
+
+                <!-- Classical AI -->
+                <article class="proj-card" data-cat="ml" data-tech="a* bfs dfs csp arc consistency minimax alpha-beta knn decision tree svm scikit-learn networkx classical ai search">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-ml">ML Foundations</span>
+                    </div>
+                    <h3>Classical AI &amp; ML from Scratch</h3>
+                    <p>DFS/BFS/A* maze pathfinding, a map-coloring CSP with arc consistency + backtracking (NetworkX), an unbeatable Minimax + alpha-beta Tic-Tac-Toe agent, and from-scratch linear regression, KNN, and decision trees.</p>
+                    <div class="proj-tech"><span>A* / CSP</span><span>Minimax</span><span>Scikit-learn</span><span>NetworkX</span></div>
+                </article>
+
+                <!-- Heart failure -->
+                <article class="proj-card" data-cat="ml" data-tech="pandas seaborn matplotlib eda healthcare data science heart failure clinical statistics correlation">
+                    <div class="proj-card-top">
+                        <span class="proj-cat c-ml">ML Foundations</span>
+                    </div>
+                    <h3>Heart-Failure Clinical Analysis</h3>
+                    <p>Analyzed clinical/demographic drivers of mortality in a 299-patient heart-failure dataset — univariate/bivariate analysis and correlation checks identifying ejection fraction, serum sodium, and creatinine as key signals.</p>
+                    <div class="proj-tech"><span>Pandas</span><span>Seaborn</span><span>EDA</span><span>Healthcare</span></div>
+                </article>
+
+                <p class="proj-empty" id="projEmpty">No projects match that filter. Try another.</p>
             </div>
         </section>
 
-        <section id="courses" class="wrap section panel">
-            <h2>Selected Coursework</h2>
-            <ul class="course-list">
-                <li>Large Language Model Systems</li>
-                <li>Advanced Deep Learning</li>
-                <li>AI Experience Lab (NLP)</li>
-                <li>Data Science in Healthcare</li>
-                <li>AI on Edge</li>
-                <li>Multi-Modal Diffusion Models</li>
-                <li>Software Engineering</li>
-                <li>Network Centric Computing</li>
-            </ul>
-        </section>
-
-        <section id="skills" class="wrap section panel panel-alt">
-            <h2>Skills</h2>
-            <div class="chips">
-                <span>Python</span><span>C++</span><span>TypeScript</span><span>PyTorch</span><span>TensorFlow</span>
-                <span>LangChain</span><span>Hugging
-                    Face</span><span>ChromaDB</span><span>FAISS</span><span>Flutter</span>
-                <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Socket.IO</span>
+        <!-- ================= SKILLS ================= -->
+        <section id="skills" class="wrap">
+            <div class="reveal">
+                <p class="eyebrow">Toolkit</p>
+                <h2 class="section-title">Skills &amp; technologies</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-group reveal">
+                    <h4><span class="ico">💻</span> Languages</h4>
+                    <div class="skill-chips">
+                        <span>Python</span><span>C++</span><span>C</span><span>TypeScript</span><span>Java</span><span>Haskell</span><span>MATLAB</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4><span class="ico">🧠</span> ML / Deep Learning</h4>
+                    <div class="skill-chips">
+                        <span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>Scikit-learn</span><span>NumPy</span><span>Pandas</span><span>XGBoost</span><span>Matplotlib</span><span>Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4><span class="ico">🤖</span> LLM / Agentic</h4>
+                    <div class="skill-chips">
+                        <span>Hugging Face</span><span>LangChain</span><span>LoRA / PEFT</span><span>bitsandbytes</span><span>Google ADK</span><span>Gemini API</span><span>Groq API</span><span>Chroma</span><span>FAISS</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4><span class="ico">🗜️</span> Compression &amp; Edge</h4>
+                    <div class="skill-chips">
+                        <span>Apache TVM</span><span>GPTQ / Qronos</span><span>Quantization (PTQ/QAT)</span><span>Knowledge Distillation</span><span>Pruning</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4><span class="ico">🧩</span> Systems &amp; Web</h4>
+                    <div class="skill-chips">
+                        <span>Node.js</span><span>Express</span><span>React</span><span>Flutter</span><span>MongoDB</span><span>Socket.IO</span><span>FastAPI</span><span>AWS</span><span>RunPod</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4><span class="ico">🛠️</span> Tools</h4>
+                    <div class="skill-chips">
+                        <span>Git</span><span>Jupyter</span><span>Linux</span><span>NetworkX</span><span>Figma</span><span>Canva</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="experience" class="wrap section panel">
-            <h2>Experience</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3>AI Intern – <a href="https://www.linkedin.com/company/skylabs-ai/" target="_blank"
-                            rel="noreferrer">Skylabs AI</a></h3>
-                    <p class="meta">2025 – Present</p>
-                    <p>Building agentic pipelines for synthetic data generation and verification; adapted a
-                        state-of-the-art Google paper for internal use.</p>
-                </article>
-
-                <article class="card">
-                    <h3>Research Intern - LLM Compression (LUMS)</h3>
-                    <p class="meta">Jan 2025 - May 2025</p>
-                    <p>Worked on pruning-based LLM compression and contrastive pruning strategies.</p>
-                </article>
-
-                <article class="card">
-                    <h3>Research Intern - Machine Vision Lab (GIST)</h3>
-                    <p class="meta">Aug 2024 - Dec 2024</p>
-                    <p>Worked on image captioning models with multi-head attention and BLEU evaluations.</p>
-                </article>
-
-                <article class="card">
-                    <h3>Teaching Assistant - CS100, Data Structures</h3>
-                    <p>Supported labs, grading, and office hours.</p>
-                </article>
-
-                <article class="card">
-                    <h3>Director IT - LUMS Model UN</h3>
-                    <p>Built WordPress systems and automated QR workflows for 800+ delegates.</p>
-                </article>
+        <!-- ================= BEYOND ================= -->
+        <section id="beyond" class="wrap">
+            <div class="reveal">
+                <p class="eyebrow">Beyond the lab</p>
+                <h2 class="section-title">Leadership &amp; community</h2>
+            </div>
+            <div class="beyond-grid">
+                <div class="beyond-card reveal">
+                    <h4>LUMS Model UN (LUMUN)</h4>
+                    <div class="role">Director IT · AD Finance &amp; Operations</div>
+                    <p>Built the LUMUN website from scratch and automated QR-code tag generation in Python for ~800 delegates; managed vendor relationships and finances for a ~1,000-delegate annual conference.</p>
+                </div>
+                <div class="beyond-card reveal">
+                    <h4>LUMS Religious Society</h4>
+                    <div class="role">Coordinator · Assistant Team Lead, Marketing</div>
+                    <p>Coordinated the society's first flagship festival hosting 300+ students across calligraphy, debate, and more — and helped secure PKR 30 lakh+ in sponsorships.</p>
+                </div>
+                <div class="beyond-card reveal">
+                    <h4>Public Speaking</h4>
+                    <div class="role">The LUMUN Orator 2024</div>
+                    <p>Spoke at a public-speaking workshop and hosted the closing ceremony of the LUMS Religious Festival — comfortable presenting technical and non-technical work to a room.</p>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="wrap section panel panel-alt">
-            <h2>Contact</h2>
-            <p><strong>Email:</strong> mfatim.shoaib&#64;gmail.com</p>
-            <p><strong>Phone:</strong> +92 3202020325</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/fatim-shoaib" target="_blank"
-                    rel="noreferrer">github.com/fatim-shoaib</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohammad-fatim-shoaib/" target="_blank"
-                    rel="noreferrer">mohammad-fatim-shoaib</a></p>
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="wrap contact">
+            <div class="contact-card reveal">
+                <div class="glow"></div>
+                <p class="eyebrow" style="justify-content:center">Get in touch</p>
+                <h2>Let's build something<br /><span class="grad-text">worth understanding.</span></h2>
+                <p>I'm open to AI / ML research and engineering roles. Reach out — I usually reply within a day.</p>
+                <div class="contact-actions">
+                    <a href="mailto:mfatim.shoaib@gmail.com" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                        mfatim.shoaib@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohammad-fatim-shoaib/" target="_blank" rel="noreferrer" class="btn btn-ghost">LinkedIn</a>
+                    <a href="https://github.com/Fatim-Shoaib" target="_blank" rel="noreferrer" class="btn btn-ghost">GitHub</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="wrap">
-            <p>© 2026 Mohammad Fatim Shoaib</p>
+        <div class="wrap footer-inner">
+            <span>© 2026 Mohammad Fatim Shoaib · Lahore, Pakistan</span>
+            <div class="foot-links">
+                <a href="https://github.com/Fatim-Shoaib" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/mohammad-fatim-shoaib/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a href="mailto:mfatim.shoaib@gmail.com">Email</a>
+                <a href="#top">Back to top ↑</a>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Project filter
-        (function () {
-            const search = document.getElementById('projectSearch');
-            const filter = document.getElementById('projectFilter');
-            const list = Array.from(document.querySelectorAll('#projectList .project-entry'));
-
-            function render() {
-                const q = (search.value || '').toLowerCase();
-                const t = filter.value;
-                list.forEach((el) => {
-                    const text = (el.textContent || '').toLowerCase();
-                    const matchesQ = q === '' || text.indexOf(q) !== -1;
-                    const matchesFilter = t === 'all' || el.dataset.type === t;
-                    el.style.display = matchesQ && matchesFilter ? 'block' : 'none';
-                });
-            }
-
-            search.addEventListener('input', render);
-            filter.addEventListener('change', render);
-            render();
-        })();
-
-        // Skylabs AI toggle
-        (function () {
-            const btn = document.getElementById('skylabsToggle');
-            const details = document.getElementById('skylabsDetails');
-
-            btn.addEventListener('click', function () {
-                const isOpen = details.classList.toggle('open');
-                btn.classList.toggle('open', isOpen);
-                btn.setAttribute('aria-expanded', String(isOpen));
-            });
-        })();
-
-        // LLM sub-list toggle
-        (function () {
-            const toggle = document.getElementById('llmToggle');
-            const sub = document.getElementById('llmSub');
-
-            toggle.addEventListener('click', function () {
-                const isOpen = sub.classList.toggle('open');
-                toggle.classList.toggle('open', isOpen);
-                toggle.setAttribute('aria-expanded', String(isOpen));
-            });
-        })();
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
