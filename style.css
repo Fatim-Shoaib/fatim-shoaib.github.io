@@ -112,12 +112,17 @@ body {
 .wrap {
     max-width: var(--maxw);
     margin: 0 auto;
-    padding: 0 24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 section {
-    padding: 84px 0;
+    padding: 28px 0;
     position: relative;
+}
+
+section[id] {
+    scroll-margin-top: 76px;
 }
 
 .eyebrow {
